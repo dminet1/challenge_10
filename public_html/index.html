@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+    <head>
+        <meta charset="utf-8">
+        <title>Challenge 10</title>
+        <link rel="stylesheet" href="css/main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+        <script src="controleurs/controleur.js"></script>
+        <script src="controleurs/products.js"></script>
+        <script src="modeles/modele.js"></script>
+    </head>
+    <body>
+        <div ng-controller="productsCtrl">
+            <label>Search: <input ng-model="searchText"></label>
+            <p style="text-decoration: underline">Liste des produits</p>
+            <my-products></my-products>
+        </div>
+        <div ng-controller="videogamesCtrl">
+            <button id="getbtn" ng-click="videogameslist()">Liste de jeux vidéos</button>
+            <p>http status code : {{status}}</p>
+            <p>http response data : {{data}}</p>
+            <p>http config : {{config}}</p>
+        </div>
+    </body>
+</html>

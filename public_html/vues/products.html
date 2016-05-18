@@ -1,0 +1,9 @@
+<div class="list" ng-controller="productsCtrl">
+    <ol>
+        <li ng-repeat = "product in products| filter:searchText" >
+            Produit : <strong> {{product.name}} </strong> 
+            <br />
+            Description : {{product.category}}, Prix = <strong style="color:green">{{product.price}}</strong>
+        </li>
+    </ol>
+</div>
